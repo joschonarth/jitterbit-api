@@ -5,5 +5,12 @@
     "formatter": {
       "semicolons": "asNeeded"
     }
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "useSortedInterfaceMembers": "off"
+      }
+    }
   }
 }
