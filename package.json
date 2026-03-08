@@ -3,15 +3,19 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check": "ultracite check",
+    "fix": "ultracite fix"
   },
   "keywords": [],
   "author": "João Otávio Schonarth",
   "license": "MIT",
   "description": "",
   "devDependencies": {
+    "@biomejs/biome": "2.4.5",
     "@types/node": "25.3.5",
     "tsx": "4.21.0",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "ultracite": "7.2.5"
   }
 }
