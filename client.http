@@ -29,3 +29,8 @@ Content-Type: application/json
     }
   ]
 }
+
+###
+
+# Get Order
+GET {{baseUrl}}/order/v10089015vdb-05

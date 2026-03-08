@@ -11,4 +11,13 @@ export class PrismaOrdersRepository implements OrdersRepository {
 
     return order
   }
+
+  async findById(orderId: string): Promise<OrderWithItems | null> {
+    const order = await prisma.order.findUnique({
+      where: { orderId },
+      include: { items: true },
+    })
+
+    return order
+  }
 }
