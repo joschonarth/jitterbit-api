@@ -1,0 +1,16 @@
+services:
+  jitterbit-pg:
+    image: bitnami/postgresql
+    container_name: jitterbit-postgres
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    environment:
+      - POSTGRESQL_USERNAME=docker
+      - POSTGRESQL_PASSWORD=docker
+      - POSTGRESQL_DATABASE=jitterbit
+    volumes:
+      - jitterbit-pg-data:/bitnami/postgresql
+
+volumes:
+  jitterbit-pg-data:
