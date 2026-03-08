@@ -7,6 +7,7 @@ import {
 } from "fastify-type-provider-zod"
 import z, { ZodError } from "zod"
 import { env } from "./env"
+import { appRoutes } from "./http/routes"
 import { swaggerConfig } from "./plugins/swagger"
 
 export const app = fastify({
@@ -25,6 +26,8 @@ app.register(swaggerConfig)
 app.get("/health", () => {
   return "OK"
 })
+
+app.register(appRoutes)
 
 app.setErrorHandler((error, _, reply) => {
   if (error instanceof ZodError) {
