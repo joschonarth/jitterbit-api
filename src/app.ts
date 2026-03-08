@@ -7,10 +7,11 @@ import {
 } from "fastify-type-provider-zod"
 import z, { ZodError } from "zod"
 import { env } from "./env"
+import { swaggerConfig } from "./plugins/swagger"
 
 export const app = fastify({
   logger: {
-    level: env.NODE_ENV === "production" ? "info" : "debug",
+    level: env.NODE_ENV === "production" ? "info" : "warn",
   },
 }).withTypeProvider<ZodTypeProvider>()
 
@@ -19,18 +20,22 @@ app.setValidatorCompiler(validatorCompiler)
 
 app.register(fastifyCors)
 
+app.register(swaggerConfig)
+
 app.get("/health", () => {
   return "OK"
 })
 
-app.setErrorHandler((error, request, reply) => {
+app.setErrorHandler((error, _, reply) => {
   if (error instanceof ZodError) {
     return reply
       .status(400)
       .send({ message: "Validation error.", issues: z.treeifyError(error) })
   }
 
-  request.log.error(error)
+  if (env.NODE_ENV !== "production") {
+    console.error(error)
+  }
 
   return reply.status(500).send({ message: "Internal server error." })
 })
