@@ -20,4 +20,5 @@ export interface OrdersRepository {
     orderId: string,
     data: Prisma.OrderUpdateInput
   ): Promise<OrderWithItems>
+  delete(orderId: string): Promise<void>
 }
