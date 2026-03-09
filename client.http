@@ -34,3 +34,8 @@ Content-Type: application/json
 
 # Get Order
 GET {{baseUrl}}/order/v10089015vdb-05
+
+###
+
+# List Orders
+GET {{baseUrl}}/order/list

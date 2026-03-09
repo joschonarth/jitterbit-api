@@ -20,4 +20,12 @@ export class PrismaOrdersRepository implements OrdersRepository {
 
     return order
   }
+
+  async findMany(): Promise<OrderWithItems[]> {
+    const orders = await prisma.order.findMany({
+      include: { items: true },
+    })
+
+    return orders
+  }
 }
