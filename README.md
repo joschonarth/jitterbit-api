@@ -192,7 +192,7 @@ Authorization: Bearer <token>
 Os testes são escritos com **Vitest** e cobrem os principais fluxos e regras de negócio da aplicação.
 ```bash
 # Roda todos os testes
-npm test
+npm run test
 
 # Roda os testes em watch mode
 npm run test:watch
