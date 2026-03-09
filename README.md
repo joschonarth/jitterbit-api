@@ -1,5 +1,7 @@
 <div align="center">
 
+<img height="60" alt="Jitterbit" src="https://github.com/user-attachments/assets/bcbf6cad-02ba-4f28-b8bb-e1699b465b58" />
+
 # 🛒 Jitterbit API
 
 *API REST para gerenciamento de pedidos.*
