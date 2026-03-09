@@ -22,7 +22,7 @@ app.setValidatorCompiler(validatorCompiler)
 
 app.register(fastifyCors)
 
-app.register(swaggerConfig)
+swaggerConfig(app)
 
 app.get("/health", () => {
   return "OK"
