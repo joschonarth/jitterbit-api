@@ -32,6 +32,7 @@ export const getOrderRoute: FastifyPluginCallbackZod = (app) => {
           }),
           404: z.object({
             message: z.string(),
+            code: z.string(),
           }),
         },
       },

@@ -1,3 +1,4 @@
+import { ResourceNotFoundError } from "@/errors/resource-not-found-error"
 import type {
   OrdersRepository,
   OrderWithItems,
@@ -24,7 +25,7 @@ export class GetOrderUseCase {
     const order = await this.ordersRepository.findById(orderId)
 
     if (!order) {
-      throw new Error("Order not found")
+      throw new ResourceNotFoundError()
     }
 
     return { order }

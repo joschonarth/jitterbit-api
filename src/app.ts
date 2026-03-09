@@ -7,6 +7,7 @@ import {
 } from "fastify-type-provider-zod"
 import z, { ZodError } from "zod"
 import { env } from "./env"
+import { AppError } from "./errors/app-error"
 import { appRoutes } from "./http/routes"
 import { swaggerConfig } from "./plugins/swagger"
 
@@ -30,6 +31,13 @@ app.get("/health", () => {
 app.register(appRoutes)
 
 app.setErrorHandler((error, _, reply) => {
+  if (error instanceof AppError) {
+    return reply.status(error.statusCode).send({
+      message: error.message,
+      code: error.code,
+    })
+  }
+
   if (error instanceof ZodError) {
     return reply
       .status(400)
