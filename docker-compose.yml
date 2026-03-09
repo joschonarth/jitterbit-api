@@ -11,6 +11,7 @@ services:
       - POSTGRESQL_DATABASE=jitterbit
     volumes:
       - jitterbit-pg-data:/bitnami/postgresql
+      - ./docker:/docker-entrypoint-initdb.d
 
 volumes:
   jitterbit-pg-data:
