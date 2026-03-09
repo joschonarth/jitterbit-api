@@ -17,7 +17,6 @@
 🛠️ [Tecnologias](#️-tecnologias)&nbsp;&nbsp;•&nbsp;&nbsp;
 ✨ [Funcionalidades](#-funcionalidades)&nbsp;&nbsp;•&nbsp;&nbsp;
 🚀 [Como rodar](#-como-rodar)&nbsp;&nbsp;•&nbsp;&nbsp;
-🌐 [Deploy](#-deploy)&nbsp;&nbsp;•&nbsp;&nbsp;
 📖 [Documentação](#-documentação-da-api)&nbsp;&nbsp;•&nbsp;&nbsp;
 🧪 [Testes](#-testes)
 
@@ -47,6 +46,7 @@ A **Jitterbit API** é uma API REST desenvolvida como parte do **Desafio Técnic
 - 🛡️ **[Zod](https://zod.dev/)** — Validação e parsing de schemas com inferência de tipos.
 - 🔍 **[Biome](https://biomejs.dev/)** — Linting e formatação de código de alta performance.
 - 🔄 **[GitHub Actions](https://github.com/features/actions)** — Integração contínua e automação do pipeline de testes.
+- ☁️ **[Render](https://render.com/)** — Plataforma de deploy em nuvem para hospedagem da API.
 
 ---
 
@@ -63,6 +63,7 @@ A **Jitterbit API** é uma API REST desenvolvida como parte do **Desafio Técnic
 - [x] 📖 Documentação interativa da API com Swagger
 - [x] 🧪 Testes automatizados com Vitest
 - [x] 🔄 Pipeline de CI rodando os testes a cada push
+- [x] ☁️ Deploy em produção na Render
 
 ---
 
@@ -159,7 +160,7 @@ A documentação interativa está disponível em:
 
 Com o servidor rodando, acesse a documentação interativa gerada pelo Swagger:
 
-**[http://localhost:3333/docs](http://localhost:3333/docs)**
+👉 **[http://localhost:3333/docs](http://localhost:3333/docs)**
 
 ### 🔐 Autenticação
 
