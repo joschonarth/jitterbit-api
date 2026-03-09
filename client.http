@@ -57,3 +57,8 @@ Content-Type: application/json
     }
   ]
 }
+
+###
+
+# Delete Order
+DELETE {{baseUrl}}/order/v10089015vdb-05
