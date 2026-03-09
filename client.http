@@ -39,3 +39,21 @@ GET {{baseUrl}}/order/v10089015vdb-05
 
 # List Orders
 GET {{baseUrl}}/order/list?page=1&pageSize=2
+
+###
+
+# Update Order
+PUT {{baseUrl}}/order/v10089015vdb-05
+Content-Type: application/json
+
+{
+  "valorTotal": 20000,
+  "dataCriacao": "2023-07-19T12:24:11.5299601+00:00",
+  "items": [
+    {
+      "idItem": "2434",
+      "quantidadeItem": 3,
+      "valorItem": 5000
+    }
+  ]
+}

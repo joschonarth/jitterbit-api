@@ -39,4 +39,17 @@ export class PrismaOrdersRepository implements OrdersRepository {
 
     return { orders, total }
   }
+
+  async update(
+    orderId: string,
+    data: Prisma.OrderUpdateInput
+  ): Promise<OrderWithItems> {
+    const order = await prisma.order.update({
+      where: { orderId },
+      data,
+      include: { items: true },
+    })
+
+    return order
+  }
 }
