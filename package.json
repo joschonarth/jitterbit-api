@@ -6,8 +6,9 @@
     "dev": "tsx watch src/server.ts",
     "check": "ultracite check",
     "fix": "ultracite fix",
-    "pretest": "npm run db:migrate:test",
-    "pretest:watch": "npm run db:migrate:test",
+    "pretest": "npm run db:generate:test && npm run db:migrate:test",
+    "pretest:watch": "npm run db:generate:test && npm run db:migrate:test",
+    "db:generate:test": "dotenv -e .env.test -- prisma generate",
     "db:migrate:test": "dotenv -e .env.test -- prisma migrate deploy",
     "test": "vitest run",
     "test:watch": "vitest"
