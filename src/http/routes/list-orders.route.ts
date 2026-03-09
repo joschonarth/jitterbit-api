@@ -11,6 +11,11 @@ export const listOrdersRoute: FastifyPluginCallbackZod = (app) => {
         operationId: "listOrders",
         tags: ["orders"],
 
+        querystring: z.object({
+          page: z.coerce.number().int().positive().default(1),
+          pageSize: z.coerce.number().int().positive().max(100).default(10),
+        }),
+
         response: {
           200: z.object({
             orders: z.array(
@@ -27,6 +32,12 @@ export const listOrdersRoute: FastifyPluginCallbackZod = (app) => {
                 ),
               })
             ),
+            meta: z.object({
+              total: z.number(),
+              page: z.number(),
+              pageSize: z.number(),
+              totalPages: z.number(),
+            }),
           }),
         },
       },

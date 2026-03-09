@@ -3,8 +3,19 @@ import type {
   OrderWithItems,
 } from "@/repositories/orders.repository"
 
+interface ListOrdersUseCaseRequest {
+  page: number
+  pageSize: number
+}
+
 interface ListOrdersUseCaseResponse {
   orders: OrderWithItems[]
+  meta: {
+    total: number
+    page: number
+    pageSize: number
+    totalPages: number
+  }
 }
 
 export class ListOrdersUseCase {
@@ -14,9 +25,23 @@ export class ListOrdersUseCase {
     this.ordersRepository = ordersRepository
   }
 
-  async execute(): Promise<ListOrdersUseCaseResponse> {
-    const orders = await this.ordersRepository.findMany()
+  async execute({
+    page,
+    pageSize,
+  }: ListOrdersUseCaseRequest): Promise<ListOrdersUseCaseResponse> {
+    const { orders, total } = await this.ordersRepository.findMany({
+      page,
+      pageSize,
+    })
 
-    return { orders }
+    return {
+      orders,
+      meta: {
+        total,
+        page,
+        pageSize,
+        totalPages: Math.ceil(total / pageSize),
+      },
+    }
   }
 }

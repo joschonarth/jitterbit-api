@@ -1,6 +1,11 @@
 import type { Prisma } from "generated/prisma/client"
 import { prisma } from "@/lib/prisma"
-import type { OrdersRepository, OrderWithItems } from "../orders.repository"
+import type {
+  FindManyParams,
+  FindManyResult,
+  OrdersRepository,
+  OrderWithItems,
+} from "../orders.repository"
 
 export class PrismaOrdersRepository implements OrdersRepository {
   async create(data: Prisma.OrderCreateInput): Promise<OrderWithItems> {
@@ -21,11 +26,17 @@ export class PrismaOrdersRepository implements OrdersRepository {
     return order
   }
 
-  async findMany(): Promise<OrderWithItems[]> {
-    const orders = await prisma.order.findMany({
-      include: { items: true },
-    })
+  async findMany({ page, pageSize }: FindManyParams): Promise<FindManyResult> {
+    const [orders, total] = await prisma.$transaction([
+      prisma.order.findMany({
+        include: { items: true },
+        skip: (page - 1) * pageSize,
+        take: pageSize,
+        orderBy: { creationDate: "desc" },
+      }),
+      prisma.order.count(),
+    ])
 
-    return orders
+    return { orders, total }
   }
 }
