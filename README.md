@@ -121,14 +121,9 @@ Suba o container do PostgreSQL com Docker:
 docker compose up -d
 ```
 
-Gere o Prisma Client:
+Execute o `setup` para gerar o Prisma Client e aplicar as migrations:
 ```bash
-npx prisma generate
-```
-
-Execute as migrations para criar as tabelas:
-```bash
-npx prisma migrate deploy
+npm run setup
 ```
 
 ### ▶️ Execução
