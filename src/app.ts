@@ -9,6 +9,7 @@ import z, { ZodError } from "zod"
 import { env } from "./env"
 import { AppError } from "./errors/app-error"
 import { appRoutes } from "./http/routes"
+import { jwtConfig } from "./plugins/jwt"
 import { swaggerConfig } from "./plugins/swagger"
 
 export const app = fastify({
@@ -23,6 +24,7 @@ app.setValidatorCompiler(validatorCompiler)
 app.register(fastifyCors)
 
 swaggerConfig(app)
+jwtConfig(app)
 
 app.get("/health", () => {
   return "OK"
