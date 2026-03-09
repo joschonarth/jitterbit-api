@@ -9,6 +9,8 @@ export const listOrdersRoute: FastifyPluginCallbackZod = (app) => {
       schema: {
         summary: "List orders",
         operationId: "listOrders",
+        description:
+          "Returns a paginated list of all orders with their items. Use `page` and `pageSize` query params to control pagination.",
         tags: ["orders"],
 
         querystring: z.object({

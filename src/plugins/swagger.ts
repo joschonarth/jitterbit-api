@@ -8,6 +8,8 @@ export async function swaggerConfig(app: FastifyInstance) {
     openapi: {
       info: {
         title: "Jitterbit API",
+        description:
+          "REST API for managing orders and their items, including creation, retrieval, update, and deletion.",
         version: "1.0.0",
       },
     },

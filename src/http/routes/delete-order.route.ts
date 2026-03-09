@@ -8,6 +8,8 @@ export const deleteOrderRoute: FastifyPluginCallbackZod = (app) => {
     {
       schema: {
         summary: "Delete order",
+        description:
+          "Deletes an order and all its associated items by order ID.",
         operationId: "deleteOrder",
         tags: ["orders"],
 

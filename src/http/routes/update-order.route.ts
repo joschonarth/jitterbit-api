@@ -8,6 +8,8 @@ export const updateOrderRoute: FastifyPluginCallbackZod = (app) => {
     {
       schema: {
         summary: "Update order",
+        description:
+          "Updates an existing order by order ID. All fields are optional — only the provided fields will be updated. If items are provided, they will replace all existing items.",
         operationId: "updateOrder",
         tags: ["orders"],
 

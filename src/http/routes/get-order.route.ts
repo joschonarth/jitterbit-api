@@ -8,6 +8,7 @@ export const getOrderRoute: FastifyPluginCallbackZod = (app) => {
     {
       schema: {
         summary: "Get order",
+        description: "Retrieves a single order and its items by order ID.",
         operationId: "getOrder",
         tags: ["orders"],
 
