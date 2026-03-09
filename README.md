@@ -6,10 +6,10 @@
 
 *API REST para gerenciamento de pedidos.*
 
-<img src="https://img.shields.io/github/last-commit/joschonarth/jitterbit-api?style=default&logo=git&logoColor=white&color=1b3e51&labelColor=27272a" alt="last-commit">
-<img src="https://img.shields.io/github/languages/top/joschonarth/jitterbit-api?style=default&color=f54614&labelColor=27272a" alt="repo-top-language">
-<img src="https://img.shields.io/github/languages/count/joschonarth/jitterbit-api?style=default&color=1b3e51&labelColor=27272a" alt="repo-language-count">
-<img src="https://img.shields.io/github/actions/workflow/status/joschonarth/jitterbit-api/ci.yml?style=default&color=f54614&labelColor=27272a" alt="ci-tests">
+<img src="https://img.shields.io/github/last-commit/joschonarth/jitterbit-api?style=default&logo=git&logoColor=white&color=f54614&labelColor=1b3e51" alt="last-commit">
+<img src="https://img.shields.io/github/languages/top/joschonarth/jitterbit-api?style=default&color=f54614&labelColor=1b3e51" alt="repo-top-language">
+<img src="https://img.shields.io/github/languages/count/joschonarth/jitterbit-api?style=default&color=f54614&labelColor=1b3e51" alt="repo-language-count">
+<img src="https://img.shields.io/github/actions/workflow/status/joschonarth/jitterbit-api/ci.yml?style=default&color=f54614&labelColor=1b3e51" alt="ci-tests">
 
 ---
 
