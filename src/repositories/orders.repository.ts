@@ -5,4 +5,5 @@ export type OrderWithItems = Order & { items: Item[] }
 export interface OrdersRepository {
   create(data: Prisma.OrderCreateInput): Promise<OrderWithItems>
   findById(orderId: string): Promise<OrderWithItems | null>
+  findMany(): Promise<OrderWithItems[]>
 }
