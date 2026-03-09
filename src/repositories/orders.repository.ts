@@ -16,4 +16,8 @@ export interface OrdersRepository {
   create(data: Prisma.OrderCreateInput): Promise<OrderWithItems>
   findById(orderId: string): Promise<OrderWithItems | null>
   findMany(params: FindManyParams): Promise<FindManyResult>
+  update(
+    orderId: string,
+    data: Prisma.OrderUpdateInput
+  ): Promise<OrderWithItems>
 }
