@@ -8,12 +8,24 @@ GET {{baseUrl}}/health
 
 ###
 
-# Create Order
-POST {{baseUrl}}/order
+# @name auth
+POST {{baseUrl}}/auth
 Content-Type: application/json
 
 {
-  "numeroPedido": "v10089015vdb-05",
+  "username": "admin",
+  "password": "admin"
+}
+
+###
+
+# Create Order
+POST {{baseUrl}}/order
+Content-Type: application/json
+Authorization: Bearer {{auth.response.body.token}}
+
+{
+  "numeroPedido": "v10089015vdb-06",
   "valorTotal": 10000,
   "dataCriacao": "2023-07-19T12:24:11.5299601+00:00",
   "items": [
@@ -33,18 +45,21 @@ Content-Type: application/json
 ###
 
 # Get Order
-GET {{baseUrl}}/order/v10089015vdb-05
+GET {{baseUrl}}/order/v10089015vdb-06
+Authorization: Bearer {{auth.response.body.token}}
 
 ###
 
 # List Orders
 GET {{baseUrl}}/order/list?page=1&pageSize=2
+Authorization: Bearer {{auth.response.body.token}}
 
 ###
 
 # Update Order
-PUT {{baseUrl}}/order/v10089015vdb-05
+PUT {{baseUrl}}/order/v10089015vdb-06
 Content-Type: application/json
+Authorization: Bearer {{auth.response.body.token}}
 
 {
   "valorTotal": 20000,
@@ -61,4 +76,5 @@ Content-Type: application/json
 ###
 
 # Delete Order
-DELETE {{baseUrl}}/order/v10089015vdb-05
+DELETE {{baseUrl}}/order/v10089015vdb-06
+Authorization: Bearer {{auth.response.body.token}}
