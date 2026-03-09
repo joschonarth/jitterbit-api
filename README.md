@@ -17,6 +17,7 @@
 🛠️ [Tecnologias](#️-tecnologias)&nbsp;&nbsp;•&nbsp;&nbsp;
 ✨ [Funcionalidades](#-funcionalidades)&nbsp;&nbsp;•&nbsp;&nbsp;
 🚀 [Como rodar](#-como-rodar)&nbsp;&nbsp;•&nbsp;&nbsp;
+🌐 [Deploy](#-deploy)&nbsp;&nbsp;•&nbsp;&nbsp;
 📖 [Documentação](#-documentação-da-api)&nbsp;&nbsp;•&nbsp;&nbsp;
 🧪 [Testes](#-testes)
 
@@ -92,10 +93,10 @@ A **Jitterbit API** é uma API REST desenvolvida como parte do **Desafio Técnic
 
 4. Configure as variáveis de ambiente copiando o arquivo de exemplo:
 ```bash
-    cp .env.example .env
+cp .env.example .env
 ```
 
-    Em seguida, abra o arquivo `.env` e preencha as variáveis:
+5. Em seguida, abra o arquivo `.env` e preencha as variáveis:
 ```env
     # Node Environment
     NODE_ENV=development
@@ -137,6 +138,20 @@ npm run dev
 ```
 
 O servidor estará disponível em **[http://localhost:3333](http://localhost:3333)**.
+
+---
+
+## 🌐 Deploy
+
+A API está disponível em produção na **Render**:
+
+🔗 **[https://jitterbit-api.onrender.com](https://jitterbit-api.onrender.com)**
+
+A documentação interativa está disponível em:
+
+🔗 **[https://jitterbit-api.onrender.com/docs](https://jitterbit-api.onrender.com/docs)**
+
+> ⚠️ A aplicação está hospedada no plano gratuito da Render, portanto pode haver um delay de até 50 segundos na primeira requisição devido ao cold start.
 
 ---
 
