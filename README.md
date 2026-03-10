@@ -10,6 +10,7 @@
 <img src="https://img.shields.io/github/languages/top/joschonarth/jitterbit-api?style=default&color=f54614&labelColor=1b3e51" alt="repo-top-language">
 <img src="https://img.shields.io/github/languages/count/joschonarth/jitterbit-api?style=default&color=f54614&labelColor=1b3e51" alt="repo-language-count">
 <img src="https://img.shields.io/github/actions/workflow/status/joschonarth/jitterbit-api/ci.yml?style=default&color=f54614&labelColor=1b3e51" alt="ci-tests">
+<img src="https://img.shields.io/github/license/joschonarth/jitterbit-api?style=default&color=f54614&labelColor=1b3e51" alt="license">
 
 ---
 
@@ -37,13 +38,13 @@ A **Jitterbit API** é uma API REST desenvolvida como parte do **Desafio Técnic
 - 🟢 **[Node.js](https://nodejs.org/)** — Ambiente de execução JavaScript server-side.
 - ⚡ **[Fastify](https://fastify.dev/)** — Framework web focado em performance e baixo overhead.
 - 🟦 **[TypeScript](https://www.typescriptlang.org/)** — Tipagem estática e segurança em tempo de desenvolvimento.
-- 🔷 **[Prisma ORM](https://www.prisma.io/)** — ORM moderno e type-safe para TypeScript.
+- 🔼 **[Prisma ORM](https://www.prisma.io/)** — ORM moderno e type-safe para TypeScript.
 - 🐘 **[PostgreSQL](https://www.postgresql.org/)** — Banco de dados relacional robusto e confiável.
 - 🐳 **[Docker](https://www.docker.com/)** — Containerização do banco de dados para ambiente reproduzível.
 - 📖 **[Swagger](https://swagger.io/)** — Documentação interativa da API via `@fastify/swagger`.
 - 🔐 **[JWT](https://jwt.io/)** — Autenticação stateless via `@fastify/jwt`.
 - 🧪 **[Vitest](https://vitest.dev/)** — Framework de testes unitários e de integração.
-- 🛡️ **[Zod](https://zod.dev/)** — Validação e parsing de schemas com inferência de tipos.
+- 💎 **[Zod](https://zod.dev/)** — Validação e parsing de schemas com inferência de tipos.
 - 🔍 **[Biome](https://biomejs.dev/)** — Linting e formatação de código de alta performance.
 - 🔄 **[GitHub Actions](https://github.com/features/actions)** — Integração contínua e automação do pipeline de testes.
 - ☁️ **[Render](https://render.com/)** — Plataforma de deploy em nuvem para hospedagem da API.
